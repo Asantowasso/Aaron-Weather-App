@@ -3,14 +3,8 @@
 // The search will produce the name of the city, the date, temperature, wind speed and humidity
 // The application logs the users search history and allows them to click the previously searched cities to view them
 
-function getApi() {
-var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=94.04&exclude=hourly,daily&appid=b822598e32f666bae94083d5722b3cb8';
-
-}
-
-fetch (requestUrl)
-.then (function(response){
-return response.json();
+fetch('https://api.openweathermap.org/data/3.0/onecall?lat=32.0&lon=31.0&exclude={part}&appid=[3f47a5127ecff2b8f4c226b487bf833a]')
+.then (response => {
+return response.json();   
 })
 
-getApi()
