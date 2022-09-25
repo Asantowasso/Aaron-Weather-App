@@ -18,15 +18,18 @@ fetch(
   })
   .then(function (data) {
     console.log(data);
-    const boxes = document.querySelectorAll(".box");
-    console.log(boxes);
-    
+    //const boxes = document.querySelector(".box").innerHTML = "Text";
+   // console.log(boxes);
+
     // extract the lat and lon
     var long = data.coord.lon;
     var lat = data.coord.lat;
     var temp = data.main.temp;
+    document.querySelector(".box1").innerHTML = temp;
     var humidity = data.main.humidity;
+    document.querySelector(".box2").innerHTML= humidity;
     var wind = data.wind.speed;
+    document.querySelector(".box3").innerHTML= wind;
     
     // -97.7431 30.2672
     // sanity check
