@@ -18,13 +18,16 @@ fetch(
   })
   .then(function (data) {
     console.log(data);
-
+    const boxes = document.querySelectorAll(".box");
+    console.log(boxes);
+    
     // extract the lat and lon
     var long = data.coord.lon;
     var lat = data.coord.lat;
-    var wind = data.wind.speed;
     var temp = data.main.temp;
     var humidity = data.main.humidity;
+    var wind = data.wind.speed;
+    
     // -97.7431 30.2672
     // sanity check
     console.log(long, lat);
