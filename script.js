@@ -22,10 +22,15 @@ fetch(
     // extract the lat and lon
     var long = data.coord.lon;
     var lat = data.coord.lat;
-
+    var wind = data.wind.speed;
+    var temp = data.main.temp;
+    var humidity = data.main.humidity;
     // -97.7431 30.2672
     // sanity check
     console.log(long, lat);
+    console.log (wind);
+    console.log(temp);
+    console.log(humidity);
     // insert the lat and lon into the url to make the next call (contcatenation)
     var oneCallUrl =
       "https://api.openweathermap.org/data/2.5/onecall?lat=30.2672&lon=-97.7431&exclude=hourly&appid=3f47a5127ecff2b8f4c226b487bf833a";
@@ -45,7 +50,7 @@ fetch(
         /* 
         method 1: manipulate static html
             -put static html on the screen w/ html to your linking
-            -reach into the html and grab the element syou want to put your conent in (queryselector)
+            -reach into the html and grab the elements you want to put your conent in (queryselector)
             -use dot notation to insert your data into the html object
 
         method 2: create your html using js
