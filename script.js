@@ -6,6 +6,14 @@
 var city = "austin";
 var apiKey = "3f47a5127ecff2b8f4c226b487bf833a";
 
+function displayDate() {
+console.log(displayDate)
+var curDate = moment().format("MMMM dd, YYYY");
+console.log(curDate)
+document.querySelector(".box0").innerHTML = curDate;
+
+}
+
 fetch(
   "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
